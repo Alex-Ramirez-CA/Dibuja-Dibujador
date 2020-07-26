@@ -15,6 +15,7 @@ var y;
 var cc;
 var colorcito = "blue";
 var ancho = 3;
+var color = document.getElementById("texto_color");
 
 document.addEventListener("mousedown", oprimir );
 document.addEventListener("mousemove", mover );
@@ -38,7 +39,7 @@ function mover(evento){
 			 colorcito = "white"
 			 ancho = 5;
 		} else if (pintadorcito.checked) {
-			colorcito = "blue"
+			color;
 			ancho = 3;
 		}
 
