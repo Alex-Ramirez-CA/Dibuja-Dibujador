@@ -16,6 +16,8 @@ var cc;
 var colorcito = "blue";
 var ancho = 3;
 var color = document.getElementById("texto_color");
+var boton = document.getElementById("botoncito");
+boton.addEventListener("click", dibujoPorClick ); 
 
 document.addEventListener("mousedown", oprimir );
 document.addEventListener("mousemove", mover );
@@ -39,7 +41,7 @@ function mover(evento){
 			 colorcito = "white"
 			 ancho = 5;
 		} else if (pintadorcito.checked) {
-			color;
+			colorcito;
 			ancho = 3;
 		}
 
@@ -68,6 +70,10 @@ function borrar(){
 
 function limpiarLienzo(lienzo){
 	lienzo.clearRect(0,0,cuadrito.width, cuadrito.height);
+}
+
+function dibujoPorClick(){
+	colorcito = color.value;
 }
 
 
