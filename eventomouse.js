@@ -15,11 +15,15 @@ var y;
 var cc;
 var colorcito = "blue";
 var ancho = 3;
+var color = document.getElementById("texto_color");
+var boton = document.getElementById("btnCambColor");
+boton.addEventListener("click", dibujoPorClick ); 
+var Borrin = document.getElementById("btnBorrar");
+Borrin.addEventListener("click", borrar ); 
 
 document.addEventListener("mousedown", oprimir );
 document.addEventListener("mousemove", mover );
 document.addEventListener("mouseup", soltar );
-document.addEventListener("keydown", borrar ); //Manda a llamar la funcion borrar cuando se oprime cualquier tecla
 
 function dibujarLinea(color, x_ini, y_ini, x_fin, y_fin, lienzo, ancho) { 
 	lienzo.beginPath(); 
@@ -38,7 +42,7 @@ function mover(evento){
 			 colorcito = "white"
 			 ancho = 5;
 		} else if (pintadorcito.checked) {
-			colorcito = "blue"
+			dibujoPorClick();
 			ancho = 3;
 		}
 
@@ -67,6 +71,11 @@ function borrar(){
 
 function limpiarLienzo(lienzo){
 	lienzo.clearRect(0,0,cuadrito.width, cuadrito.height);
+}
+
+//Cuando se presiona el boton, se toma el color de la caja de texto
+function dibujoPorClick(){
+	colorcito = color.value;
 }
 
 
