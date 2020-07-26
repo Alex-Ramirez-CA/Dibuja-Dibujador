@@ -41,7 +41,7 @@ function mover(evento){
 			 colorcito = "white"
 			 ancho = 5;
 		} else if (pintadorcito.checked) {
-			colorcito;
+			dibujoPorClick();
 			ancho = 3;
 		}
 
