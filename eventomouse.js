@@ -13,7 +13,7 @@ var pintadorcito = document.getElementById("pintar");
 var x;
 var y;
 var cc;
-var colorcito = "blue";
+var colorcito = "white";
 var ancho = 3;
 var color = document.getElementById("texto_color");
 var boton = document.getElementById("btnCambColor");
@@ -40,7 +40,7 @@ function mover(evento){
 		
 		if (borradorcito.checked) {
 			 colorcito = "white"
-			 ancho = 5;
+			 ancho = 9;
 		} else if (pintadorcito.checked) {
 			dibujoPorClick();
 			ancho = 3;
